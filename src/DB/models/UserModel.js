@@ -35,7 +35,7 @@ const userSchema = new Schema({
     timestamps: true
 })
 
-userSchema.pre('save', function(next, docs) {
+userSchema.pre('save', function(next) {
     const user = this
     user.password = hashPassword({plainPassword: user.password})
     next()

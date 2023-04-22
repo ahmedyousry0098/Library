@@ -1,5 +1,4 @@
 export const globalErrHandling = (err, req, res, next) => {
-    // console.log(err.message);
     if (err) {
         return res
             .status(err.statusCode || 500)
